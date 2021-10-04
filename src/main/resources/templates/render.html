@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Valorant Offsets</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+
+
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="display-4">Valorant Offsets</h1>
+        <hr class="my-4">
+        <strong><p th:text="|Last Updated On: ${lastupdate}|"></p></strong>
+    </div>
+
+
+    <table class="table table-striped">
+        <tr>
+            <th scope="col">Offset</th>
+            <th scope="col">Value</th>
+        </tr>
+        <tr th:each="offset : ${offsets}">
+            <td th:text="${offset.name}"></td>
+            <td th:text="${offset.value}"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
